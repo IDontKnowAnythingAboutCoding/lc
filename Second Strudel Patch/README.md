@@ -3,6 +3,8 @@ Second Strudel Patch by David Gao
 
 ### Code
 
+//Second Patch by David Gao
+
 stack(
   note("<[c3,c2] [ab1,ab2] [f1,f2] [g1,g2]>").euclid(10,16).sound("sine").gain(1.2),
   note("c4 [eb4,bb3] d4 eb4 [eb4,g4]").mask("<1 [0 0 0 0 1]>").sound("gm_music_box").delay(0.2),
@@ -11,7 +13,6 @@ stack(
   ("[~ ~ ~ ~] [LinnDrum_cp ~ ~ ~] [~ ~ ~ ~] [LinnDrum_cp ~ LinnDrum_cp LinnDrum_cp]").s().gain(0.6).delay("0.1"),
   ("[~ KorgMinipops_hh KorgMinipops_hh ~ KorgMinipops_hh ~ KorgMinipops_hh KorgMinipops_hh KorgMinipops_hh] [KorgMinipops_hh ~ KorgMinipops_hh ~] [ KorgMinipops_hh ~ ~ ~ ] [ ~ KorgMinipops_hh KorgMinipops_hh KorgMinipops_hh ]").s().gain(0.85),
 ).cpm(30).room(0.15)
-
 
 
 ### Comments
