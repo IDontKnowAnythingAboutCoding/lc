@@ -1,0 +1,17 @@
+setcps 1
+
+d1 $ palindrome $ sound "bd*4 bd" # gain 0.8
+
+d2 $ sound "sn ~ sn ~" # gain 0.8
+
+d3 $ sound "hh*8" # gain 1.1
+
+d4 $ palindrome $ n (scale "minor" "0 2 4 5 7 9 6 11")
+  # s "arpy"
+  # gain 0.7
+  # pan (range 0.3 0.7 $ slow 4 sine)
+  # room "0.6"
+  # sz "0.5"
+
+
+hush
