@@ -3,7 +3,7 @@ setcps (80/60)  -- Set cps
 -- Kick & Snare
 d1 $ slow 4 $ s "[bd ~ sn:2 ~] [~ bd sn:2 ~][~ bd sn:2 bd] [~ bd sn:2 ~]" # gain 0.7
 
--- Synth 2: Hi-hat
+-- Hi-hat
 d2 $ slow 2 $ s "[hh hh ~ ~][~ ~ hh hh]" # gain 0.7 # room 0.2 # size 0.9
 
 -- Clap
