@@ -1,0 +1,67 @@
+-- Set tempo
+setcps (60/60)
+
+-- Drums
+d1 $ stack [
+    s (palindrome "808sd ~ 808sd ~ 808sd 808sd ~ 808sd:2")
+      # speed "1"
+      # gain 0.9
+      # room 0.1
+      # cutoff (range 100 1200 $ slow 8 sine)
+    ,
+    s (palindrome "808bd:3 [808bd*2] ~ 808bd:2")
+      # gain 0.9
+    -- ,
+    -- s "~ hh ~ hh*2"
+    --   # gain 0.9
+    --   # pan (slow 8 $ cosine)
+    ]
+
+d1 $ stop 0
+
+-- Bass
+d2 $ stack [
+    n (palindrome "2 ~ 2 4 ~ 0 4 2")
+      # sound "bass1"
+      # release "0.1"
+      # gain 0.8
+      # cutoff (range 100 300 $ slow 8 sine) -- change to 300 - 600
+    -- ,
+    -- s "bass4*2 bass2 ~ bass4 [~ bass2]"
+    --   # speed (range 0.7 1.2 $ slow 8 sine)
+    --   # gain 0.3
+    --   # pan (slow 6 $ sine)
+    ]
+
+d2 $ stop 0
+
+--Melody
+d3 $ stack [
+      n (palindrome "3 ~ 6 7 ~ 4 5 1")  -- Melody pattern
+      # sound "arpy"
+      # release 2
+      # gain 0.65
+      # pan (slow 4 $ sine)
+      # cutoff (range 200 1000 $ slow 8 sine) -- change to 1000 - 3000
+      # room 0.5
+      # size 0.8
+    -- ,
+    -- s (palindrome "glitch:5 glitch:2*2 glitch:4*3")
+    --   # speed (range (-1) 1.2 $ slow 16 sine)
+    --   # gain 0.4
+    ]
+
+d3 $ stop 0
+
+-- Textures
+d4 $ stack [
+    s "noise*8"
+      # gain 0.8
+      # speed (range 1 0.5 $ slow 12 sine)
+      # room 0.8 # size 0.9
+      # pan (slow 6 $ sine)
+    ]
+
+d4 $ stop 0
+
+hush
